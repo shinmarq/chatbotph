@@ -30,7 +30,7 @@ var server = restify.createServer();
 
 setupConfig.middleWare(server, restify);
 
-server.listen(process.env.PORT, function(){
+server.listen(3978, function(){
     console.log('restify listening to port: ', server.url);
 });
 
@@ -51,6 +51,7 @@ bot.use(builder.Middleware.dialogVersion({ version: 1.0, resetCommand: /^reset/i
 bot.use({
     botbuilder: function(session, next){
                     // Clear data on start and on reset
+                    console.log(session);
                     var response = session.message.text; 
                     if (response == "Get_Started") {
                         session.perUserInConversationData = {};

@@ -8,7 +8,8 @@ const {Wit, log} = require('node-wit');
 module.exports = [
 
     function(session, args){
-        var response = session.message.text;
+        var response;
+        session.message.text == '' ? response = 'thumbs up' : response = session.message.text;
         const sessionId = session.message.address.user.id
         
         // Wit
