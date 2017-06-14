@@ -53,7 +53,7 @@ bot.use({
                     // Clear data on start and on reset
                     console.log(session);
                     var response = session.message.text; 
-                    if (response == "Get_Started") {
+                    if (response == 'Get_Started') {
                         session.perUserInConversationData = {};
                         session.userData = {};
                         session.conversationData = {};
