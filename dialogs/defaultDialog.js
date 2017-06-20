@@ -76,40 +76,40 @@ function witEntities(response, reply, session){
     switch(response){
         case 'greeting':
             var style = builder.ListStyle['button'];
-            builder.Prompts.choice(session, reply, 'Menu', {listStyle: style, maxRetries: 0});
+            builder.Prompts.choice(session, reply, 'Menu', {listStyle: style});
         break;
 
         case 'welcome':
             //session.endConversation('You\'re welcome. :)');
-            session.endConversation(reply);
+            session.send(reply);
         break;
 
         case 'profanity':
             var style = builder.ListStyle['button'];
             //builder.Prompts.choice(session, 'No need for profanity, please tap menu that\'s might help.', 'Menu', {listStyle: style});
-            builder.Prompts.choice(session, reply, 'Menu', {listStyle: style, maxRetries: 0});
+            builder.Prompts.choice(session, reply, 'Menu', {listStyle: style});
         break;
 
         case 'compliment':
             //session.endConversation('Really appreciated. :)');
-            session.endConversation(reply);      
+            session.send(reply);      
         break;
 
         case 'farewell':
              //session.endConversation('Talk to you later.');
-             session.endConversation(reply);
+             session.send(reply);
         break;
 
         case 'inquiry':
             var style = builder.ListStyle['button'];
             //builder.Prompts.choice(session, 'For more information please email us at chatbotph@gmail.com or click button below', 'Menu', {listStyle: style});
-            builder.Prompts.choice(session, reply, 'Menu', {listStyle: style, maxRetries: 0});
+            builder.Prompts.choice(session, reply, 'Menu', {listStyle: style});
         break;
 
         default:
             var style = builder.ListStyle['button'];
             //builder.Prompts.choice(session, 'I think you misspelled something.', 'Menu', {listStyle: style});
-            builder.Prompts.choice(session, reply, 'Menu', {listStyle: style, maxRetries: 0});
+            builder.Prompts.choice(session, reply, 'Menu', {listStyle: style});
         break;
     }
 }
