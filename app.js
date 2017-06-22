@@ -36,10 +36,10 @@ server.listen(3978, function(){
 
 // Create chat bot
 var connector = new builder.ChatConnector({
-    appId: constant.MICROSOFT_APP_ID,
-    appPassword: constant.MICROSOFT_APP_PASSWORD
-    // appId: process.env.MICROSOFT_APP_ID,
-    // appPassword: process.env.MICROSOFT_APP_PASSWORD
+    // appId: constant.MICROSOFT_APP_ID,
+    // appPassword: constant.MICROSOFT_APP_PASSWORD
+    appId: process.env.MICROSOFT_APP_ID,
+    appPassword: process.env.MICROSOFT_APP_PASSWORD
 });
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
