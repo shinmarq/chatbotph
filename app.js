@@ -30,7 +30,7 @@ var server = restify.createServer();
 
 setupConfig.middleWare(server, restify);
 
-server.listen(3978, function(){
+server.listen(process.env.port || process.env.PORT || 3978, function(){
     console.log('restify listening to port: ', server.url);
 });
 
