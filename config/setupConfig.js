@@ -1,5 +1,5 @@
 var constant = require('../constant');
-var sendgrid = require('sendgrid')('azure_1e3d9fc754e94d7f7a4f13eb6fa1bf99@azure.com','quipit123');
+var sendgrid = require('sendgrid')(sendgrid_username, sendgrid_password);
 
 module.exports.middleWare = function(server, restify){
 
