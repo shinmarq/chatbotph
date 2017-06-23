@@ -19,41 +19,28 @@ module.exports.emailSender = function(ticket){
                         '<h3>Contact #: '+ ticket.contactNo +'</h3><b>' +
                         '<h3>Bot Type: '+ ticket.botType +'</h3><b>';
 
-    // var helper = require('sendgrid').mail;
-    // var fromEmail = new helper.Email('shin@chatbot.ph');
-    // var toEmail = new helper.Email('chatbotph@gmail.com');
-    // var subject = 'ChatBot Request Ticket';
-    // var content = new helper.Content('text/html', htmlEmailBody);
-    // var mail = new helper.Mail(fromEmail, subject, toEmail, content);
+    var helper = require('sendgrid').mail;
+    var fromEmail = new helper.Email('shin@chatbot.ph');
+    var toEmail = new helper.Email('chatbotph@gmail.com');
+    var subject = 'ChatBot Request Ticket';
+    var content = new helper.Content('text/html', htmlEmailBody);
+    var mail = new helper.Mail(fromEmail, subject, toEmail, content);
 
-    // var sg = require('sendgrid')(constant.SG_TOKEN);
+    var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
 
-    // var request = sg.emptyRequest({
-    // method: 'POST',
-    // path: '/v3/mail/send',
-    // body: mail.toJSON()
-    // });
-
-    // sg.API(request, function (error, response) {
-    // if (!error) {
-    //     console.log(response.statusCode);
-    //     console.log(response.body);
-    //     console.log(response.headers);
-    //     console.log('Email sent');
-    // }
-    // });
-
-    var sendgrid = require('sendgrid')(process.env.sendgrid_username, process.env.sendgrid_password);
-    var email = new sendgrid.Email({
-        to: 'chatbotph@gmail.com',
-        from: 'chatbotph@noreply.com',
-        subject: 'ChatBot Request Ticket',
-        html: htmlEmailBody
+    var request = sg.emptyRequest({
+    method: 'POST',
+    path: '/v3/mail/send',
+    body: mail.toJSON()
     });
 
-    sendgrid.send(email, function(err, json){
-        if(err) { return console.error(err); }
-        console.log(json);
+    sg.API(request, function (error, response) {
+    if (!error) {
+        console.log(response.statusCode);
+        console.log(response.body);
+        console.log(response.headers);
+        console.log('Email sent');
+    }
     });
 
 }
