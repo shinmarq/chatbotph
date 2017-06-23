@@ -44,8 +44,8 @@ module.exports.emailSender = function(ticket){
     // });
     var sendgrid = require('sendgrid')(sendgrid_username,sendgrid_password);
     var email = new sendgrid.Email({
-        to: 'chatbotPH@no-reply.com',
-        from: 'chatbotph@gmail.com',
+        to: 'chatbotph@gmail.com',
+        from: 'chatbotph@noreply.com',
         subject: 'ChatBot Request Ticket',
         html: htmlEmailBody
     });
