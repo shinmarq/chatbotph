@@ -11,6 +11,7 @@ module.exports = [
                  builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1494397786/chatbot_logo_head_c5ya3g.png")
             ]);
         var msg = new builder.Message(session).attachments([card]);
+        session.sendTyping();
         session.send(msg);
         session.send("Hi, welcome to ChatbotPH! I can help you create, train and maintain a chatbot like me to automate how you do your business. 💯");
         session.beginDialog('/Help');
