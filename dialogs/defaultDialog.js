@@ -71,8 +71,9 @@ module.exports = [
 
 // Replies
 function witEntities(response, reply, session){
-    console.log(response);
+    
     if(reply === undefined || reply == null){response = 'DEFAULT';}
+
     switch(response){
         case 'greeting':
             var style = builder.ListStyle['button'];
