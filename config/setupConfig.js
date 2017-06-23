@@ -1,4 +1,5 @@
 var constant = require('../constant');
+var sendgrid = require('sendgrid')('azure_1e3d9fc754e94d7f7a4f13eb6fa1bf99@azure.com','quipit123');
 
 module.exports.middleWare = function(server, restify){
 
@@ -19,28 +20,40 @@ module.exports.emailSender = function(ticket){
                         '<h3>Contact #: '+ ticket.contactNo +'</h3><b>' +
                         '<h3>Bot Type: '+ ticket.botType +'</h3><b>';
 
-    var helper = require('sendgrid').mail;
-    var fromEmail = new helper.Email('shin@chatbot.ph');
-    var toEmail = new helper.Email('chatbotph@gmail.com');
-    var subject = 'ChatBot Request Ticket';
-    var content = new helper.Content('text/html', htmlEmailBody);
-    var mail = new helper.Mail(fromEmail, subject, toEmail, content);
+    // var helper = require('sendgrid').mail;
+    // var fromEmail = new helper.Email('shin@chatbot.ph');
+    // var toEmail = new helper.Email('chatbotph@gmail.com');
+    // var subject = 'ChatBot Request Ticket';
+    // var content = new helper.Content('text/html', htmlEmailBody);
+    // var mail = new helper.Mail(fromEmail, subject, toEmail, content);
 
-    var sg = require('sendgrid')(constant.SG_TOKEN);
+    // var sg = require('sendgrid')(constant.SG_TOKEN);
 
-    var request = sg.emptyRequest({
-    method: 'POST',
-    path: '/v3/mail/send',
-    body: mail.toJSON()
+    // var request = sg.emptyRequest({
+    // method: 'POST',
+    // path: '/v3/mail/send',
+    // body: mail.toJSON()
+    // });
+
+    // sg.API(request, function (error, response) {
+    // if (!error) {
+    //     console.log(response.statusCode);
+    //     console.log(response.body);
+    //     console.log(response.headers);
+    //     console.log('Email sent');
+    // }
+    // });
+
+    var email = new sendgrid.Email({
+        to: 'chatbotPH@no-reply.com',
+        from: 'chatbotph@gmail.com',
+        subject: 'ChatBot Request Ticket',
+        html: htmlEmailBody
     });
 
-    sg.API(request, function (error, response) {
-    if (!error) {
-        console.log(response.statusCode);
-        console.log(response.body);
-        console.log(response.headers);
-        console.log('Email sent');
-    }
+    sendgrid.send(email, function(err, json){
+        if(err) { return console.error(err); }
+        console.log(json);
     });
 
 }
