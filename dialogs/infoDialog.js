@@ -26,7 +26,7 @@ module.exports = [
                 session.replaceDialog('/Statistics');
             break;
             case 'Chatbot Examples':
-                session.send('3');
+                session.replaceDialog('/BotSamples');
             break;
         }
 
