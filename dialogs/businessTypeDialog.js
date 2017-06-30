@@ -12,7 +12,7 @@ module.exports = [
                 new builder.HeroCard(session)
                     .title("PRODUCTS")
                     .images([
-                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1494397786/chatbot_logo_head_c5ya3g.png")
+                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1498803831/Screen_Shot_2017-06-30_at_2.22.46_PM_utedm8.png")
                     ])
                     .buttons([
                         builder.CardAction.imBack(session, "Products", "SELECT")
@@ -20,7 +20,7 @@ module.exports = [
                 new builder.HeroCard(session)
                     .title("SERVICES")
                     .images([
-                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1494397786/chatbot_logo_head_c5ya3g.png")
+                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1498803865/Screen_Shot_2017-06-30_at_2.23.00_PM_urfxe8.png")
                     ])
                     .buttons([
                         builder.CardAction.imBack(session, "Services", "SELECT")

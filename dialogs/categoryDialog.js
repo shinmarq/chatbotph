@@ -9,7 +9,7 @@ module.exports = [
                 new builder.HeroCard(session)
                     .title("Food and Beverages")
                     .images([
-                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1494397786/chatbot_logo_head_c5ya3g.png")
+                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1498805299/Screen_Shot_2017-06-30_at_2.44.32_PM_qvapo6.png")
                     ])
                     .buttons([
                         builder.CardAction.imBack(session, "Food and beverages", "SELECT")
@@ -17,7 +17,7 @@ module.exports = [
                 new builder.HeroCard(session)
                     .title("Fashion")
                     .images([
-                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1494397786/chatbot_logo_head_c5ya3g.png")
+                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1498805300/Screen_Shot_2017-06-30_at_2.46.26_PM_skg8mj.png")
                     ])
                     .buttons([
                         builder.CardAction.imBack(session, "Fashion", "SELECT")
@@ -25,7 +25,7 @@ module.exports = [
                 new builder.HeroCard(session)
                     .title("Retail")
                     .images([
-                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1494397786/chatbot_logo_head_c5ya3g.png")
+                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1498805304/Screen_Shot_2017-06-30_at_2.46.41_PM_lrc3wf.png")
                     ])
                     .buttons([
                         builder.CardAction.imBack(session, "Retail", "SELECT")
@@ -33,7 +33,7 @@ module.exports = [
                 new builder.HeroCard(session)
                     .title("Hospitality")
                     .images([
-                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1494397786/chatbot_logo_head_c5ya3g.png")
+                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1498805305/Screen_Shot_2017-06-30_at_2.46.53_PM_ief6e8.png")
                     ])
                     .buttons([
                         builder.CardAction.imBack(session, "Hospitality", "SELECT")

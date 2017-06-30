@@ -11,7 +11,7 @@ module.exports = [
                 new builder.HeroCard(session)
                     .title("Make A Chatbot")
                     .images([
-                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1494397786/chatbot_logo_head_c5ya3g.png")
+                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1495699927/Screen_Shot_2017-05-12_at_12.51.08_PM_xmw2uj.png")
                     ])
                     .buttons([
                         builder.CardAction.imBack(session, "Make a Chatbot", "SELECT")
@@ -19,7 +19,7 @@ module.exports = [
                 new builder.HeroCard(session)
                     .title("what is a Chatbot?")
                     .images([
-                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1494397786/chatbot_logo_head_c5ya3g.png")
+                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1495699928/Screen_Shot_2017-05-12_at_12.51.20_PM_o88sc9.png")
                     ])
                     .buttons([
                         builder.CardAction.imBack(session, "Chatbot", "SELECT")
@@ -27,7 +27,7 @@ module.exports = [
                 new builder.HeroCard(session)
                     .title("Chatbot Examples")
                     .images([
-                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1494397786/chatbot_logo_head_c5ya3g.png")
+                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1495699923/Screen_Shot_2017-05-12_at_12.51.32_PM_yl8hch.png")
                     ])
                     .buttons([
                         builder.CardAction.imBack(session, "Examples", "SELECT")
@@ -35,7 +35,7 @@ module.exports = [
                 new builder.HeroCard(session)
                     .title("What can i do?")
                     .images([
-                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1494397786/chatbot_logo_head_c5ya3g.png")
+                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1495699924/Screen_Shot_2017-05-12_at_12.51.56_PM_prfsj4.png")
                     ])
                     .buttons([
                         builder.CardAction.imBack(session, "Chatbot does", "SELECT")
@@ -43,7 +43,7 @@ module.exports = [
                 new builder.HeroCard(session)
                     .title("Chatbot News")
                     .images([
-                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1494397786/chatbot_logo_head_c5ya3g.png")
+                        builder.CardImage.create(session, "http://res.cloudinary.com/hobwovvya/image/upload/v1495699912/Screen_Shot_2017-05-12_at_12.52.27_PM_ssbjmz.png")
                     ])
                     .buttons([
                         builder.CardAction.openUrl(session, "http://chatbot.ph", "Coming Soon")

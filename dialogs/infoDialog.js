@@ -6,7 +6,7 @@ module.exports = [
         var imgMsg = new builder.Message(session)
             .attachments([{
                 contentType: "image/jpeg",
-                contentUrl: "http://res.cloudinary.com/hobwovvya/image/upload/v1494397786/chatbot_logo_head_c5ya3g.png"
+                contentUrl: "http://res.cloudinary.com/hobwovvya/image/upload/v1498805586/Screen_Shot_2017-06-30_at_2.52.24_PM_arw7yv.png"
             }]);
         var style = builder.ListStyle['button'];
         session.send('Good question! Here\'s why...');
