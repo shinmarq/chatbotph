@@ -107,6 +107,25 @@ function witEntities(response, reply, session){
             builder.Prompts.choice(session, reply, 'Menu', {listStyle: style});
         break;
 
+        case 'jokes':
+            session.send(reply);
+        break;
+
+        case 'appointment':
+            var style = builder.ListStyle['button'];
+            builder.Prompts.choice(session, reply, 'Menu', {listStyle: style});
+        break;
+
+        case 'apology':
+            var style = builder.ListStyle['button'];
+            builder.Prompts.choice(session, reply, 'Menu', {listStyle: style});
+        break;
+
+        case 'pricing':
+            var style = builder.ListStyle['button'];
+            builder.Prompts.choice(session, reply, 'Menu', {listStyle: style});
+        break;
+
         default:
             var style = builder.ListStyle['button'];
             //builder.Prompts.choice(session, 'I think you misspelled something.', 'Menu', {listStyle: style});

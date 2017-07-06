@@ -94,9 +94,15 @@ bot.dialog('/Help', [
 
 bot.dialog('/Menu', menuDialog);
 
-bot.dialog('/BusinessType', businessTypeDialog);
+bot.dialog('/BusinessType', businessTypeDialog)
+.triggerAction({
+    matches: /^make a chatbot|create bot|i want one|services|food and beverages|fashion|retail|hospitality|other$/
+});
 
-bot.dialog('/Category', categoryDialog);
+bot.dialog('/Category', categoryDialog)
+.triggerAction({
+    matches: /^products|what are your products$/
+});
 
 bot.dialog('/GetDetails', getDetailsDialog.URL);
 
@@ -106,8 +112,14 @@ bot.dialog('/Overview', overviewDialog);
 
 bot.dialog('/Information', infoDialog);
 
-bot.dialog('/Statistics', statDialog);
+bot.dialog('/Statistics', statDialog)
+.triggerAction({
+    matches: /^stats|what's stat|statistics$/
+});
 
 bot.dialog('/BotFunctions', functionDialog);
 
-bot.dialog('/BotSamples', sampleBotDialog);
+bot.dialog('/BotSamples', sampleBotDialog)
+.triggerAction({
+    matches: /^chatbot sample|chatbot example$/
+});
