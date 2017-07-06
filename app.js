@@ -110,12 +110,12 @@ bot.dialog('/GetEmail', getDetailsDialog.Email);
 
 bot.dialog('/Overview', overviewDialog);
 
-bot.dialog('/Information', infoDialog);
-
-bot.dialog('/Statistics', statDialog)
+bot.dialog('/Information', infoDialog)
 .triggerAction({
     matches: /^stats|what's stat|statistics$/
 });
+
+bot.dialog('/Statistics', statDialog)
 
 bot.dialog('/BotFunctions', functionDialog);
 
