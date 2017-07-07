@@ -48,6 +48,7 @@ server.post('/api/messages', connector.listen());
 // Bots Dialogs
 //=========================================================
 bot.use(builder.Middleware.dialogVersion({ version: 1.0, resetCommand: /^reset/i }));
+bot.use(builder.Middleware.sendTyping());
 bot.use({
     botbuilder: function(session, next){
                     // Clear data on start and on reset
