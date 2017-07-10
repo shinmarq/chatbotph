@@ -90,7 +90,7 @@ bot.dialog('/Help', [
     }
 ])
 .triggerAction({
-    matches: /^help|Help$/
+    matches: /^help|Help|need help$/
 });
 
 bot.dialog('/Menu', menuDialog);
