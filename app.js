@@ -109,7 +109,10 @@ bot.dialog('/GetDetails', getDetailsDialog.URL);
 
 bot.dialog('/GetEmail', getDetailsDialog.Email);
 
-bot.dialog('/Overview', overviewDialog);
+bot.dialog('/Overview', overviewDialog)
+.triggerAction({
+    matches: /^what is chatbot\?|what's chatbot\?$/
+});
 
 bot.dialog('/Information', infoDialog)
 .triggerAction({
