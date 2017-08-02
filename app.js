@@ -67,7 +67,6 @@ bot.use({
                             if(!err){
                                 var msg = new builder.Message(session)
                                 .addAttachment(builder.AttachmentLayout.carousel)
-                                .title('')
                                 .text(body.ad.cta_mini)
                                 .images([ builder.CardImage.create(session, body.ad.media.url.thumb)])
                                 .buttons(builder.CardAction.openUrl(session, body.ad.url, 'Tap'))
