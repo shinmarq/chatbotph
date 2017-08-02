@@ -66,13 +66,14 @@ bot.use({
                         request('https://radbots.com/api/ads?agent_key=f09625e16e22abc6', (err, httpRes, body) => {
                             if(!err){
                                 var myAd = JSON.parse(body);
-                                var msg = new builder.Message(session)
-                                .addAttachment(builder.AttachmentLayout.carousel)
-                                .text(myAd.ad.cta_mini)
-                                .images([ builder.CardImage.create(session, myAd.ad.media.url.thumb)])
-                                .buttons(builder.CardAction.openUrl(session, myAd.ad.url, 'Tap'))
+                                console.log();
+                                // var msg = new builder.Message(session)
+                                // .addAttachment(builder.AttachmentLayout.carousel)
+                                // .text(myAd.ad.cta_mini)
+                                // .images([ builder.CardImage.create(session, myAd.ad.media.url.thumb)])
+                                // .buttons(builder.CardAction.openUrl(session, myAd.ad.url, 'Tap'))
 
-                                session.send(msg)
+                                // session.send(msg)
                             }
                         });
 
