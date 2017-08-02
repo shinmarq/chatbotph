@@ -62,6 +62,20 @@ bot.use({
 
                     if(!session.userData.firstRun){
                         session.userData.firstRun = true;
+
+                        request('https://radbots.com/api/ads?agent_key=f09625e16e22abc6', (err, httpRes, body) => {
+                            if(!err){
+                                var msg = new builder.Message(session)
+                                .addAttachment(builder.AttachmentLayout.carousel)
+                                .title('')
+                                .text(body.ad.cta_mini)
+                                .images([ builder.CardImage.create(session, body.ad.media.url.thumb)])
+                                .buttons(builder.CardAction.openUrl(session, body.ad.url, 'Tap'))
+
+                                session.send(msg)
+                            }
+                        });
+
                         session.beginDialog('/GetStarted');
                     }else{
                         //session.beginDialog('/Default', {response: response});
