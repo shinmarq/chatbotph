@@ -21,7 +21,7 @@ module.exports.emailSender = function(ticket){
 
     var helper = require('sendgrid').mail;
     var fromEmail = new helper.Email('shin@chatbot.ph');
-    var toEmail = new helper.Email('chatbotph@gmail.com');
+    var toEmail = new helper.Email('hello@chatbot.ph');
     var subject = 'ChatBot Request Ticket';
     var content = new helper.Content('text/html', htmlEmailBody);
     var mail = new helper.Mail(fromEmail, subject, toEmail, content);
